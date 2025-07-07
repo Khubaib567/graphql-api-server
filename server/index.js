@@ -1,6 +1,6 @@
 // IMPORT THE .ENV VARIABLES IN DEVELOPMENT ENVIRONMENT.
-if(process.env.NODE !=="production"){
-  require('@dotenvx/dotenvx').config({path: '../.secrets/.env'})
+if(process.env.NODE !== "production"){
+  require('dotenv').config({path : "../.secrets/.env"})
 }
 const express = require('express');
 const cors = require('cors');

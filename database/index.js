@@ -1,7 +1,8 @@
 // IMPORT THE .ENV VARIABLES IN DEVELOPMENT ENVIRONMENT.
-if(process.env.NODE !=="production"){
-  require('@dotenvx/dotenvx').config({path: '../.secrets/.env'})
+if(process.env.NODE !== "production"){
+  require('dotenv').config({path : "../.secrets/.env"})
 }
+
 
 // INITIZALIE THE SEQUELIZE LIBRARY FOR MAKING THE DB CONNECTION.
 const Sequelize = require("sequelize");
