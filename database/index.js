@@ -1,5 +1,5 @@
 // IMPORT THE .ENV VARIABLES IN DEVELOPMENT ENVIRONMENT.
-if(process.env.NODE !== "production"){
+if(process.env.ENV !== "production"){
   require('dotenv').config({path : "../.secrets/.env"})
 }
 
@@ -7,9 +7,9 @@ if(process.env.NODE !== "production"){
 // INITIZALIE THE SEQUELIZE LIBRARY FOR MAKING THE DB CONNECTION.
 const Sequelize = require("sequelize");
 // IMPORT NECCESSARY DB CREDENTIALS.
-const database = process.env.DATABASE;
-const user_name = process.env.USER_NAME;
-const password = process.env.PASSWORD;
+const database = process.env.DATABASE || "test";
+const user_name = process.env.USER_NAME || "root" ;
+const password = process.env.PASSWORD || "Password@123";
 
 // DB_CLIENT INSTANCE BY USING SEQUELIZE DEFAULT OBJECT CONSTRUCTOR.
 const sequelize = new Sequelize(database, user_name, password, {

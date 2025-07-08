@@ -17,7 +17,7 @@ const {SortOrderType} = require('../schemas/SortType');
 // Import the Employee Connection Schema 
 const {EmployeeConnectionType} = require('../schemas/EmployeeConnectionType')
 
-const RootQuery = new GraphQLObjectType({
+const rootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
   fields: {
     // Find All Employees with Optional Filters
@@ -193,6 +193,6 @@ const mutation = new GraphQLObjectType({
 });
 
 module.exports = new GraphQLSchema({
-  query: RootQuery,
-  mutation,
+  query: rootQuery,
+  mutation : mutation,
 });

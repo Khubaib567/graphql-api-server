@@ -1,5 +1,5 @@
 // IMPORT THE .ENV VARIABLES IN DEVELOPMENT ENVIRONMENT.
-if(process.env.NODE !== "production"){
+if(process.env.ENV !== "production"){
   require('dotenv').config({path : "../.secrets/.env"})
 }
 const express = require('express');
